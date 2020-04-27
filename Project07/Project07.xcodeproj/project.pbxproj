@@ -15,6 +15,7 @@
 		E851358A245673BF00E21778 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8513588245673BF00E21778 /* LaunchScreen.storyboard */; };
 		E85135922456840C00E21778 /* Petition.swift in Sources */ = {isa = PBXBuildFile; fileRef = E85135912456840C00E21778 /* Petition.swift */; };
 		E8513594245684CE00E21778 /* Petitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8513593245684CE00E21778 /* Petitions.swift */; };
+		E851359624568BC600E21778 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E851359524568BC600E21778 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		E851358B245673BF00E21778 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E85135912456840C00E21778 /* Petition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petition.swift; sourceTree = "<group>"; };
 		E8513593245684CE00E21778 /* Petitions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Petitions.swift; sourceTree = "<group>"; };
+		E851359524568BC600E21778 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				E851358B245673BF00E21778 /* Info.plist */,
 				E85135912456840C00E21778 /* Petition.swift */,
 				E8513593245684CE00E21778 /* Petitions.swift */,
+				E851359524568BC600E21778 /* DetailViewController.swift */,
 			);
 			path = Project07;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				E8513582245673BC00E21778 /* ViewController.swift in Sources */,
 				E85135922456840C00E21778 /* Petition.swift in Sources */,
 				E851357E245673BC00E21778 /* AppDelegate.swift in Sources */,
+				E851359624568BC600E21778 /* DetailViewController.swift in Sources */,
 				E8513580245673BC00E21778 /* SceneDelegate.swift in Sources */,
 				E8513594245684CE00E21778 /* Petitions.swift in Sources */,
 			);

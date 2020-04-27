@@ -15,6 +15,8 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = "Content"
+        
         let urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
         
         if let url = URL(string: urlString) {
@@ -46,6 +48,13 @@ class ViewController: UITableViewController {
         cell.detailTextLabel?.text = petition.body
         
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = DetailViewController()
+        
+        vc.detailItem = petitions[indexPath.row]
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
