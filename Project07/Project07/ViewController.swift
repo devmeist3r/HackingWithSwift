@@ -33,6 +33,8 @@ class ViewController: UITableViewController {
         } else {
             self.showError()
         }
+        
+        tableView.showsVerticalScrollIndicator = false
     }
     
     func parse(json: Data) {
