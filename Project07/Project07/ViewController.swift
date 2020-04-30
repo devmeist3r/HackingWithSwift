@@ -17,39 +17,47 @@ class ViewController: UITableViewController {
         
         navigationItem.title = "Content"
         
-        let urlString: String
-        if navigationController?.tabBarItem.tag == 0 {
-            urlString = "https://www.hackingwithswift.com/samples/petitions-1.json"
-        } else {
-            urlString = "https://www.hackingwithswift.com/samples/petitions-2.json"
-        }
-        
-        if let url = URL(string: urlString) {
-            if let data = try? Data(contentsOf: url) {
-                self.parse(json: data)
-            } else {
-                self.showError()
-            }
-        } else {
-            self.showError()
-        }
+        performSelector(inBackground: #selector(fetchJSON), with: nil)
         
         tableView.showsVerticalScrollIndicator = false
     }
     
+    @objc func fetchJSON() {
+        let urlString: String
+        if navigationController?.tabBarItem.tag == 0 {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?limit=100"
+        } else {
+            urlString = "https://api.whitehouse.gov/v1/petitions.json?signatureCountFloor=10000&limit=100"
+        }
+        
+        if let url = URL(string: urlString) {
+            if let data = try? Data(contentsOf: url) {
+                parse(json: data)
+                return
+            }
+        }
+        
+        performSelector(onMainThread: #selector(showError), with: nil, waitUntilDone: false)
+        
+    }
+    
     func parse(json: Data) {
         let decoder = JSONDecoder()
-        
         if let jsonPetitions = try? decoder.decode(Petitions.self, from: json) {
-            self.petitions = jsonPetitions.results
-            self.tableView.reloadData()
+            petitions = jsonPetitions.results
+//            tableView.performSelector(onMainThread: #selector(UITableView.reloadData), with: nil, waitUntilDone: false)
+            DispatchQueue.main.async {
+                self.tableView.reloadData()
+            }
         }
     }
     
-    func showError() {
+    @objc func showError() {
+        
         let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed; please check your connection and try again.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
-        present(ac, animated: true)
+        self.present(ac, animated: true)
+        
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
