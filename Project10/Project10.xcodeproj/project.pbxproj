@@ -14,6 +14,7 @@
 		E803081A245B33D2003CBA90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8030819245B33D2003CBA90 /* Assets.xcassets */; };
 		E803081D245B33D2003CBA90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E803081B245B33D2003CBA90 /* LaunchScreen.storyboard */; };
 		E8030825245B3C94003CBA90 /* PersonCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8030824245B3C94003CBA90 /* PersonCell.swift */; };
+		E853EFED245B895900AFB5F0 /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = E853EFEC245B895900AFB5F0 /* Person.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		E803081C245B33D2003CBA90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E803081E245B33D2003CBA90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8030824245B3C94003CBA90 /* PersonCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonCell.swift; sourceTree = "<group>"; };
+		E853EFEC245B895900AFB5F0 /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				E803081B245B33D2003CBA90 /* LaunchScreen.storyboard */,
 				E803081E245B33D2003CBA90 /* Info.plist */,
 				E8030824245B3C94003CBA90 /* PersonCell.swift */,
+				E853EFEC245B895900AFB5F0 /* Person.swift */,
 			);
 			path = Project10;
 			sourceTree = "<group>";
@@ -141,6 +144,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E853EFED245B895900AFB5F0 /* Person.swift in Sources */,
 				E8030815245B33CC003CBA90 /* ViewController.swift in Sources */,
 				E8030811245B33CC003CBA90 /* AppDelegate.swift in Sources */,
 				E8030825245B3C94003CBA90 /* PersonCell.swift in Sources */,

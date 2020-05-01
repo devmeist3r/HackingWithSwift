@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LSo-7n-Gqj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="J2H-ub-ji2">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -7,7 +7,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Images-->
         <scene sceneID="I5u-1g-Qc3">
             <objects>
                 <collectionViewController id="LSo-7n-Gqj" customClass="ViewController" customModule="Project10" customModuleProvider="target" sceneMemberID="viewController">
@@ -29,18 +29,32 @@
                                     <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-jg-6VW">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="w3E-jg-6VW">
                                             <rect key="frame" x="10" y="10" width="120" height="120"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="120" id="Eee-Zt-5sV"/>
+                                                <constraint firstAttribute="height" constant="120" id="VE7-fQ-EJ5"/>
+                                            </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-sN-DS7">
-                                            <rect key="frame" x="10" y="134" width="120" height="40"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MQp-sN-DS7">
+                                            <rect key="frame" x="10" y="135" width="120" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="aRr-dN-or4"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="16"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstItem="MQp-sN-DS7" firstAttribute="top" secondItem="w3E-jg-6VW" secondAttribute="bottom" constant="5" id="3J5-qQ-sOp"/>
+                                        <constraint firstAttribute="trailing" secondItem="MQp-sN-DS7" secondAttribute="trailing" constant="10" id="Ngd-qF-9J6"/>
+                                        <constraint firstItem="w3E-jg-6VW" firstAttribute="leading" secondItem="Wnn-YZ-2Lg" secondAttribute="leading" constant="10" id="U6N-bC-u4W"/>
+                                        <constraint firstItem="w3E-jg-6VW" firstAttribute="top" secondItem="Wnn-YZ-2Lg" secondAttribute="top" constant="10" id="WFX-yr-xvQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="w3E-jg-6VW" secondAttribute="trailing" constant="10" id="dfy-Wh-gii"/>
+                                        <constraint firstAttribute="bottom" secondItem="MQp-sN-DS7" secondAttribute="bottom" constant="5" id="lh6-O5-3AC"/>
+                                        <constraint firstItem="MQp-sN-DS7" firstAttribute="leading" secondItem="Wnn-YZ-2Lg" secondAttribute="leading" constant="10" id="vsT-3G-lNm"/>
+                                    </constraints>
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="imageView" destination="w3E-jg-6VW" id="ZCA-sY-8ym"/>
@@ -53,8 +67,27 @@
                             <outlet property="delegate" destination="LSo-7n-Gqj" id="xGe-tV-feu"/>
                         </connections>
                     </collectionView>
+                    <navigationItem key="navigationItem" title="Images" id="God-ph-u9K"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fef-RC-jsd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347.82608695652175" y="160.71428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="9pa-Fy-wSD">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="J2H-ub-ji2" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="4aC-oJ-DTV">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="LSo-7n-Gqj" kind="relationship" relationship="rootViewController" id="zRK-K1-4vC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uKp-Jn-PHm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-562.31884057971024" y="160.71428571428569"/>
         </scene>
